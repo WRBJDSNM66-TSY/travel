@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>国内游</title>
+	
+	<link rel="stylesheet" href="https://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	<script src="https://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="css/demo.css"/>
+		</head>
+		<body>
+			<div data-role="page"  data-transition="slide" data-direction="reverse">
+				
+			<div id="wrap">
+				<div data-role="content">
+				<ul>
+					<li>
+						<a href="https://www.ctrip.com/?sid=155952&allianceid=4897&ouid=index" class="a1">
+							<img src="./images/北京.jpg"  style="width: 100%;"/>
+							<div class ="divA">
+								<p class="p1">北京三日跟团游</p>
+								<p class="p2">当晚抵达全程入住2晚五星酒店！更有故宫，鸟巢，水立方等著名景点等着你！</p>
+								<p class="p3">¥<span>399</span>起</p>
+							</div>
+						</a>
+						<a href="https://www.ctrip.com/?sid=155952&allianceid=4897&ouid=index" class = "a2">
+								<p class="p4">北京三日跟团游</p>
+								<p class="p5">当晚抵达全程入住2晚五星酒店！更有故宫，鸟巢，水立方等著名景点等着你！</p>
+								<p class="p6">¥<span>399</span>起</p>
+								<p class="p7">查看详情></p>
+						</a>
+					</li>
+					
+					<li>
+						<a href="https://www.ctrip.com/?sid=155952&allianceid=4897&ouid=index" class="a1">
+							<img src="images/上海.jpg" style="width: 100%;"/>
+							<div class ="divA">
+								<p class="p1">上海4日跟团游</p>
+								<p class="p2">全程5星酒店/外滩/东方明珠、参观自贸区一次走遍！</p>
+								<p class="p3">¥<span>599</span>起</p>
+							</div>
+						</a>
+						<a href="https://www.ctrip.com/?sid=155952&allianceid=4897&ouid=index" class = "a2">
+								<p class="p4">上海4日跟团游</p>
+								<p class="p5">全程5星酒店/外滩/东方明珠、参观自贸区一次走遍！</p>
+								<p class="p6">¥<span>599</span>起</p>
+								<p class="p7">查看详情></p>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.ctrip.com/?sid=155952&allianceid=4897&ouid=index" class="a1">
+							<img src="images/内蒙古.jpg" style="width: 100%;"/>
+							<div class ="divA">
+								<p class="p1">内蒙古4日跟团游</p>
+								<p class="p2">赛马，喝羊奶，在大草原惊情驰骋，体验民族风情!</p>
+								<p class="p3">¥<span>399</span>起</p>
+							</div>
+						</a>
+						<a href="https://www.ctrip.com/?sid=155952&allianceid=4897&ouid=index" class = "a2">
+								<p class="p4">内蒙古4日跟团游</p>
+								<p class="p5">赛马，喝羊奶，在大草原惊情驰骋，体验民族风情!</p>
+								<p class="p6">¥<span>399</span>起</p>
+								<p class="p7">查看详情></p>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.ctrip.com/?sid=155952&allianceid=4897&ouid=index" class="a1">
+							<img src="images/海南.jpg" style="width: 100%;"/>
+							<div class ="divA">
+								<p class="p1">海南3日游</p>
+								<p class="p2">大海+日光谷+摄影/当地特色小吃</p>
+								<p class="p3">¥<span>549</span>起</p>
+							</div>
+						</a>
+						<a href="https://www.ctrip.com/?sid=155952&allianceid=4897&ouid=index" class = "a2">
+								<p class="p4">海南3日游</p>
+								<p class="p5">大海+日光谷+摄影/当地特色小吃</p>
+								<p class="p6">¥<span>549</span>起</p>
+								<p class="p7">查看详情></p>
+						</a>
+					</li>
+				</ul>
+			</div>
+			</div>
+			</div>
+			
+			<script src="jquery/jquery-1.7.2.min.js" type="text/javascript" charset="utf-8"></script>
+			
+			<script type="text/javascript">
+			$('li').mouseenter(function(){
+				$(this).find('.divA').stop().animate({bottom:'-66px'});
+				$(this).find('.a2').css({left:'0'})
+				$(this).children('.a2').find('.p4').css({left:'0'})
+				$(this).children('.a2').find('.p5').css({left:'0'})
+				$(this).children('.a2').find('.p6').css({transform:'scale(1)'})
+				$(this).children('.a2').find('.p7').css({bottom:'25px'})
+			})
+			$('li').mouseleave(function(){
+				$(this).find('.divA').stop().animate({bottom:'0px'});
+				$(this).find('.a2').css({left:-$(this).width()})
+				$(this).children('.a2').find('.p4').css({left:-$(this).width()})
+				$(this).children('.a2').find('.p5').css({left:-$(this).width()})
+				$(this).children('.a2').find('.p6').css({transform:'scale(1.3)'})
+				$(this).children('.a2').find('.p7').css({bottom:'-50px'})
+			})
+			</script>
+		
+	</body>
+</html>

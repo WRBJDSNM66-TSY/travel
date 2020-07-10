@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <link rel="stylesheet" href="http://demos.jquerymobile.com/1.4.5/css/themes/default/jquery.mobile-1.4.5.min.css">
+   <script src="http://demos.jquerymobile.com/1.4.5/js/jquery.js"></script>
+   <script src="http://demos.jquerymobile.com/1.4.5/js/jquery.mobile-1.4.5.min.js"></script>
+   
+  <style>
+    *{
+      font-family: 微软雅黑;
+    }
+
+    #content{
+      height:100px!important;
+    }
+	
+	#error_box{
+		height:50px;
+		width:200px;
+		margin:0 auto;
+		line-height:40px;
+		color:#fc4343;
+	}
+  </style>
+  
+  <script>
+  function fnSign(){
+  	var oUname = document.getElementById("name");
+  	var oUpass = document.getElementById("pass");
+	var oUpass1 = document.getElementById("pass1");
+  	var oError = document.getElementById("error_box");
+  	var isNotError = true;
+  	if(oUname.value.length > 20 || oUname.value.length < 6){
+  		oError.innerHTML = "用户名长度必须在6~20位之间";
+  		isNotError = false;
+  		return;
+  		
+  	}else if(oUname.value.charCodeAt(0) >= 48 && oUname.value.charCodeAt(0) <= 57){
+  		oError.innerHTML = "用户名开头不能为数字";
+  		isNotError = false;
+  		return;
+  	}else{
+  		for(var i=0; i<oUname.value.length; i++){
+  			if((oUname.value.charCodeAt(i) > 122 || oUname.value.charCodeAt(i) < 97) && (oUname.value.charCodeAt(i) > 57 || oUname.value.charCodeAt(i) < 48)){
+  				oError.innerHTML = "用户名只能包含小写字母和数字";
+  				isNotError = false;
+  				return;
+  			}
+  		}
+  	}
+  	if(oUpass.value.length > 20 || oUpass.value.length < 6){
+  		oError.innerHTML = "密码长度必须在6~20位之间";
+  		isNotError = false;
+  		return;
+  	}
+	if(oUpass.value!= oUpass1.value){
+		oError.innerHTML = "两次输入的密码不一致";
+		isNotError = false;
+		return;
+	}
+  	oError.innerHTML = "注册成功";
+  }
+  </script>
+  
+</head>
+<body>
+    <div data-role="page" id="pageone">
+      <div data-role='header'>
+        <h1>注册</h1> 
+      </div>
+	  
+      <div data-role="content">
+		  
+		<center>
+        <table>
+            <tr>
+                <td>请输入用户名:</td>
+                <td><input type="text" id="name"/></td>
+            </tr>
+            <tr>
+                <td>请输入密码:</td>
+                <td><input type="text" id="pass"/></td>
+            </tr>
+            <tr>
+                <td>请再次输入密码:</td>
+                <td><input type="text" id="pass1"/></td>
+			</tr>
+			<tr>
+				<td><div id="error_box"></div></td>
+				<td><button onclick="fnSign()">注册</button></td>					
+				<td>			
+				<a href="index.html" style="text-decoration: none; "><font size="3">取消</font></a>
+				</td>			
+			</tr>			
+        </table>
+        </center>
+		  
+        </form>
+      </div>
+
+      <div data-role="footer">
+        <h1>designedby@wangchunlei</h1>
+      </div>
+    </div> 
+</body>
+</html>

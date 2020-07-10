@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>周边游</title>
+	
+	<link rel="stylesheet" href="https://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	<script src="https://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="css/demo.css"/>
+		</head>
+		<body>
+			<div data-role="page"  data-transition="slide" data-direction="reverse">
+				
+			<div id="wrap">
+				<div data-role="content">
+				<ul>
+					<li>
+						<a href="https://www.ctrip.com/?sid=155952&allianceid=4897&ouid=index" class="a1">
+							<img src="images/郑州1.jpg"  style="width: 100%;"/>
+							<div class ="divA">
+								<p class="p1">郑州三日跟团游</p>
+								<p class="p2">当晚抵达全程入住2晚五星酒店！</p>
+								<p class="p3">¥<span>199</span>起</p>
+							</div>
+						</a>
+						<a href="https://www.ctrip.com/?sid=155952&allianceid=4897&ouid=index" class = "a2">
+								<p class="p4">郑州三日跟团游</p>
+								<p class="p5">当晚抵达全程入住2晚五星酒店！</p>
+								<p class="p6">¥<span>199</span>起</p>
+								<p class="p7">查看详情></p>
+						</a>
+					</li>
+					
+					<li>
+						<a href="https://www.ctrip.com/?sid=155952&allianceid=4897&ouid=index" class="a1">
+							<img src="images/开封.jpg" style="width: 100%;"/>
+							<div class ="divA">
+								<p class="p1">开封+洛阳10日跟团游</p>
+								<p class="p2">全程4-5星酒店/清明上河园/少林寺、龙门石窟一次走遍！</p>
+								<p class="p3">¥<span>899</span>起</p>
+							</div>
+						</a>
+						<a href="https://www.ctrip.com/?sid=155952&allianceid=4897&ouid=index" class = "a2">
+								<p class="p4">开封+洛阳10日跟团游</p>
+								<p class="p5">全程4-5星酒店/清明上河园/少林寺、龙门石窟一次走遍！</p>
+								<p class="p6">¥<span>899</span>起</p>
+								<p class="p7">查看详情></p>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.ctrip.com/?sid=155952&allianceid=4897&ouid=index" class="a1">
+							<img src="images/老君山.jpg" style="width: 100%;"/>
+							<div class ="divA">
+								<p class="p1">老君山，追梦谷4日跟团游</p>
+								<p class="p2">全程免费车载WIFI，体验侠客风情!</p>
+								<p class="p3">¥<span>499</span>起</p>
+							</div>
+						</a>
+						<a href="https://www.ctrip.com/?sid=155952&allianceid=4897&ouid=index" class = "a2">
+								<p class="p4">老君山，追梦谷4日跟团游</p>
+								<p class="p5">全程免费车载WIFI，体验侠客风情!</p>
+								<p class="p6">¥<span>499</span>起</p>
+								<p class="p7">查看详情></p>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.ctrip.com/?sid=155952&allianceid=4897&ouid=index" class="a1">
+							<img src="images/平顶山.jpg" style="width: 100%;"/>
+							<div class ="divA">
+								<p class="p1">平顶山1日游</p>
+								<p class="p2">山顶森林公园+明代县衙+品尝当地著名小吃/品质保证</p>
+								<p class="p3">¥<span>249</span>起</p>
+							</div>
+						</a>
+						<a href="https://www.ctrip.com/?sid=155952&allianceid=4897&ouid=index" class = "a2">
+								<p class="p4">平顶山1日游</p>
+								<p class="p5">山顶森林公园+明代县衙+品尝当地著名小吃/品质保证</p>
+								<p class="p6">¥<span>249</span>起</p>
+								<p class="p7">查看详情></p>
+						</a>
+					</li>
+				</ul>
+			</div>
+			</div>
+			</div>
+			
+			<script src="jquery/jquery-1.7.2.min.js" type="text/javascript" charset="utf-8"></script>
+			
+			<script type="text/javascript">
+			$('li').mouseenter(function(){
+				$(this).find('.divA').stop().animate({bottom:'-66px'});
+				$(this).find('.a2').css({left:'0'})
+				$(this).children('.a2').find('.p4').css({left:'0'})
+				$(this).children('.a2').find('.p5').css({left:'0'})
+				$(this).children('.a2').find('.p6').css({transform:'scale(1)'})
+				$(this).children('.a2').find('.p7').css({bottom:'25px'})
+			})
+			$('li').mouseleave(function(){
+				$(this).find('.divA').stop().animate({bottom:'0px'});
+				$(this).find('.a2').css({left:-$(this).width()})
+				$(this).children('.a2').find('.p4').css({left:-$(this).width()})
+				$(this).children('.a2').find('.p5').css({left:-$(this).width()})
+				$(this).children('.a2').find('.p6').css({transform:'scale(1.3)'})
+				$(this).children('.a2').find('.p7').css({bottom:'-50px'})
+			})
+			</script>
+		
+	</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="renderer" content="webkit">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+	<title>签证办理</title>
+	
+	<link rel="stylesheet" type="text/css" href="css/onlinebusinesshall/newexpand/css/index-debug.css">
+	<link rel="stylesheet" type="text/css" href="css/index1.css">
+	<link rel="stylesheet" type="text/css" href="static/lib/jquery-step/css/jquery.step.css">
+	
+	</head>
+	<body>
+	<div class="step-body" id="myStep">
+		
+		<div class="step-header" style="width:80%">
+			<ul>
+				<li><p>阅读流明</p></li>
+				<li><p>签证申请</p></li>
+				<li><p>完成</p></li>
+			</ul>
+		</div>
+		<div class="step-content">
+			<div class="step-list">
+				<div class="page-panel-title">
+						<h3 class="page-panel-title-left">流程说明</h3>
+						<h3 class="page-panel-title-right" >注：黄色为需要你配合的环节</h3>
+				</div>
+				<div class="intro-flow">
+					<div class="intro-list">
+						<div class="intro-list-left">
+							递交有效的证件
+						</div>
+						<div class="intro-list-right">
+							<span>1</span>
+							<div class="intro-list-content">
+								无需您出门，请备齐相关资料，并保持联系电话的畅通，我们会及时受理您的申请，与您预约进行线上联系，届时会同步收取相关资料。若资料不齐全的，需要您亲自到实体营业厅补交。
+							</div>
+						</div>
+					</div>
+					
+	
+					<div class="intro-list intro-list-active">
+						<div class="intro-list-left">
+							填写并递交签证申请表格
+						</div>
+						<div class="intro-list-right">
+							<span>2</span>
+							<div class="intro-list-content">
+								签证不同，表格也不同，多数要用外文填写、同时提供本人照片。
+							</div>
+						</div>
+					</div>
+	
+					<div class="intro-list">
+						<div class="intro-list-left">
+							业务受理
+						</div>
+						<div class="intro-list-right">
+							<span>3</span>
+							<div class="intro-list-content">
+								我们开始处理您的业务
+							</div>
+						</div>
+					</div>
+	
+					<div class="intro-list">
+						<div class="intro-list-left">
+							呈报国内主管部属门审查批准
+						</div>
+						<div class="intro-list-right">
+							<span>4</span>
+							<div class="intro-list-content">
+								大使馆或者领事馆，将填妥的各种签证申请表格和必要的证明材料，呈报国内主管部属门审查批准。
+							</div>
+						</div>
+					</div>
+	
+					<div class="intro-list intro-list-active">
+						<div class="intro-list-left">
+							将审查部门审批意见通知驻该国使领馆
+						</div>
+						<div class="intro-list-right">
+							<span>4</span>
+							<div class="intro-list-content">
+								前往国家的主管部门进行必要的审核后，将审批意见通知驻该国使领馆。如果同意，即发给签证；如果拒绝，也会通知申请者；
+							</div>
+						</div>
+					</div>
+	
+					<div class="intro-list intro-list-last">
+						<div class="intro-list-left">
+							完成
+						</div>
+						<div class="intro-list-right">
+							<span>4</span>
+							<div class="intro-list-content">
+								您可以等着签证办理成功。请在网厅进行注册，并绑定您的用户编号，以后您可以便捷地使用签证查询、签证订阅等服务。
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer-btn">
+					<div class="common-btn">
+						<a href="javascript:void(0);" id="applyBtn">马上申请</a>
+					</div>
+				</div>
+			</div>
+			<div class="step-list">
+				<div class="footer-btn">
+					<div class="common-btn">
+						<a href="javascript:void(0);" id="submitBtn">提交</a>
+					</div>
+				</div>
+	
+			</div>
+			<div class="step-list">
+				<div class="apply-finish">
+					<div class="apply-finish-header">
+						<img src="images/success.png">
+						<div class="apply-finish-msg">恭喜您，申请成功！</div>
+					</div>
+					<div class="apply-finish-footer">
+						<p>尊敬的用户，您已提交成功，受理编号为<span id="proNo">LS123456789</span>。</p>
+						<p><a href="index.html" data-ajax = "false" data-transition="turn">返回首页</a></p>
+					</div>
+				</div>
+			</div>
+	
+		</div>
+	
+	</div>
+	
+	<script src="static/lib/jquery/1.8/jquery.min.js"></script>
+	<script src="static/lib/jquery-step/js/jquery.step.js"></script>
+	<script>
+		$(function() {
+	
+			var step= $("#myStep").step({
+				animate:true,
+				initStep:1,
+				speed:1000
+			});
+	
+			
+			$("#preBtn").click(function(event) {
+				var yes=step.preStep();
+	
+			});
+			$("#applyBtn").click(function(event) {
+				var yes=step.nextStep();
+	
+			});
+			$("#submitBtn").click(function(event) {
+				var yes=step.nextStep();
+	
+	
+			});
+			$("#goBtn").click(function(event) {
+				var yes=step.goStep(3);
+	
+			});
+			
+	
+	
+			
+		});
+	</script>
+					
+		
+	</body>
+</html>

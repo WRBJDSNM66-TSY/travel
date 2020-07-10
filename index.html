@@ -1,0 +1,671 @@
+<!--      http://123.14.232.192:8848/demo1/index.html        -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<title>我的旅游网站</title>
+<link href="https://css.mafengwo.net/css/cv/css+mfw-index.2015:css+jquery-ui-1.9.1.custom.min:css+hotel+datepicker-range^ZFM^1563871867.css" rel="stylesheet" type="text/css"/>
+<script language="javascript" src="https://js.mafengwo.net/js/cv/js+jquery-1.8.1.min:js+global+json2:js+M+Module:js+M+M:miniapp+js+sdk:js+M+Log:js+m.statistics:js+advert+inspector^YlRX^1576064870.js" type="text/javascript" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<link rel="stylesheet" type="text/css" href="css/index.css"/>
+<script src="https://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+<script src="jquery/jquery-1.7.2.min.js" type="text/javascript"></script>
+<script src="js/index1.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/index.css"/>
+
+<style>
+.a, .b {
+    background-color: lightgray;
+    border: 1px solid black;
+    height: 100px;
+    font-weight: bold;
+    text-align: center;
+    padding: 30px;
+}
+
+            .box3 {
+                width: 25%; 
+                display: -webkit-box;                 
+            }
+            .box3 div{
+            	width: 100%;				
+            }
+			
+			
+
+            .box2 {
+			    width: 25%; 
+			    display: -webkit-box;                 
+			}
+			.box2 div{
+				width: 100%;				
+			}
+			        
+					
+			.boxpop {
+				width: 50px; /*宽度没有限制*/
+				height: 70px;
+				display: -webkit-box; /*这个必须要有*/
+			}
+
+</style>
+
+</head>
+
+<body>
+<div data-role="page" id="pageone" data-transition="slide" data-direction="reverse">
+	
+	<!-- 左边打卡页面	面板	 -->
+	        <div data-role="panel" id="revealPanel" data-display="reveal" data-theme="b">
+	            <center>
+				<p>已打卡124天!</p>
+	            <img src="images/头像.jpg" width="200" height="200"><br>
+				<span>王春蕾 &nbsp;&nbsp;&nbsp;&nbsp;</span> 
+	            <span>☆☆☆☆☆</span><br>
+				</center>
+	            <div class="message">
+	                <ul>
+						 <a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all">编辑个性签名...</a>					    
+						     <p style="color: #FF0000;" id="msg"></p>
+							<div data-role="popup" id="myPopup">
+							 
+							  	<input type="text" id="input" />
+							  	<input type="button" value="保存签名" onclick="saveStorage();" />
+							  	<input type="button" value="显示签名" onclick="loadStorage();" />
+														
+						    </div>
+						
+	                    <li><a href="#"><font color="#FFFFFF" size="2">了解会员特权</font></a></li>
+	                    <li><a href="#"><font color="#FFFFFF" size="2">我的钱包</font></a></li>
+	                    <li><a href="#"><font color="#FFFFFF" size="2">个性装扮</font></a></li>
+	                    <li><a href="#"><font color="#FFFFFF" size="2">我的收藏</font></a></li>
+	                    <li><a href="#"><font color="#FFFFFF" size="2">我的旅行相册</font></a></li>
+	                    <li><a href="#"><font color="#FFFFFF" size="2">免流量特权</font></a></li>
+	                </ul>
+	            </div>
+	        </div>
+	 <!-- 右边的面板 -->
+	        <div data-role="panel" id="overlayPanel" data-display="overlay" data-position="right">
+	            <center><h2>景点搜索...</h2></center>
+	            <form class="ui-filterable">
+	                <input id="myFilter" data-type="search" placeholder="根据名称搜索..">
+	            </form>
+	            <ul data-role="listview" data-filter="true" data-input="#myFilter" data-autodividers="true" data-inset="true">
+	           
+					<li><a href="http://image.baidu.com/search/index?tn=baiduimage&ps=1&ct=201326592&lm=-1&cl=2&nc=1&ie=utf-8&word=%E5%8C%97%E4%BA%AC">北京</a></li>  <li><a href="https://image.baidu.com/search/index?tn=baiduimage&ipn=r&ct=201326592&cl=2&lm=-1&st=-1&fm=result&fr=&sf=1&fmq=1576665593016_R&pv=&ic=&nc=1&z=&hd=&latest=&copyright=&se=1&showtab=0&fb=0&width=&height=&face=0&istype=2&ie=utf-8&sid=&word=%E6%B2%88%E9%98%B3">沈阳</a></li>
+	                <li><a href="https://image.baidu.com/search/index?tn=baiduimage&ipn=r&ct=201326592&cl=2&lm=-1&st=-1&fm=result&fr=&sf=1&fmq=1576665572021_R&pv=&ic=&nc=1&z=&hd=&latest=&copyright=&se=1&showtab=0&fb=0&width=&height=&face=0&istype=2&ie=utf-8&sid=&word=%E5%B9%BF%E5%B7%9E">广州</a></li>  <li><a href="https://image.baidu.com/search/index?tn=baiduimage&ipn=r&ct=201326592&cl=2&lm=-1&st=-1&fm=result&fr=&sf=1&fmq=1576665606484_R&pv=&ic=&nc=1&z=&hd=&latest=&copyright=&se=1&showtab=0&fb=0&width=&height=&face=0&istype=2&ie=utf-8&sid=&word=%E7%83%9F%E5%8F%B0">烟台 </a></li>
+	                <li><a href="https://image.baidu.com/search/index?tn=baiduimage&ipn=r&ct=201326592&cl=2&lm=-1&st=-1&fm=result&fr=&sf=1&fmq=1576665622509_R&pv=&ic=&nc=1&z=&hd=&latest=&copyright=&se=1&showtab=0&fb=0&width=&height=&face=0&istype=2&ie=utf-8&sid=&word=%E4%B8%8A%E6%B5%B7">上海</a></li>  <li><a href="#">唐山</a></li>
+					<li><a href="https://image.baidu.com/search/index?tn=baiduimage&ipn=r&ct=201326592&cl=2&lm=-1&st=-1&fm=result&fr=&sf=1&fmq=1576665636245_R&pv=&ic=&nc=1&z=&hd=&latest=&copyright=&se=1&showtab=0&fb=0&width=&height=&face=0&istype=2&ie=utf-8&sid=&word=%E6%B7%B1%E5%9C%B3">深圳</a></li>  <li><a href="#">济南</a></li>
+					<li><a href="https://image.baidu.com/search/index?tn=baiduimage&ipn=r&ct=201326592&cl=2&lm=-1&st=-1&fm=result&fr=&sf=1&fmq=1576665647581_R&pv=&ic=&nc=1&z=&hd=&latest=&copyright=&se=1&showtab=0&fb=0&width=&height=&face=0&istype=2&ie=utf-8&sid=&word=%E5%8E%A6%E9%97%A8">厦门</a></li>  <li><a href="#">哈尔滨</a></li>
+					<li><a href="https://image.baidu.com/search/index?tn=baiduimage&ipn=r&ct=201326592&cl=2&lm=-1&st=-1&fm=result&fr=&sf=1&fmq=1576665661710_R&pv=&ic=&nc=1&z=&hd=&latest=&copyright=&se=1&showtab=0&fb=0&width=&height=&face=0&istype=2&ie=utf-8&sid=&word=%E9%A6%99%E6%B8%AF">香港</a></li>  <li><a href="#">石家庄</a></li>
+				    <li><a href="https://image.baidu.com/search/index?tn=baiduimage&ipn=r&ct=201326592&cl=2&lm=-1&st=-1&fm=result&fr=&sf=1&fmq=1576665683198_R&pv=&ic=&nc=1&z=&hd=&latest=&copyright=&se=1&showtab=0&fb=0&width=&height=&face=0&istype=2&ie=utf-8&sid=&word=%E9%83%91%E5%B7%9E">郑州</a></li>  <li><a href="#">泉州</a></li>
+				    <li><a href="https://image.baidu.com/search/index?tn=baiduimage&ipn=r&ct=201326592&cl=2&lm=-1&st=-1&fm=result&fr=&sf=1&fmq=1576665695622_R&pv=&ic=&nc=1&z=&hd=&latest=&copyright=&se=1&showtab=0&fb=0&width=&height=&face=0&istype=2&ie=utf-8&sid=&word=%E6%AD%A6%E6%B1%89">武汉</a></li>  <li><a href="#">温州</a></li>
+				    <li><a href="https://image.baidu.com/search/index?tn=baiduimage&ipn=r&ct=201326592&cl=2&lm=-1&st=-1&fm=result&fr=&sf=1&fmq=1576665706000_R&pv=&ic=&nc=1&z=&hd=&latest=&copyright=&se=1&showtab=0&fb=0&width=&height=&face=0&istype=2&ie=utf-8&sid=&word=%E6%9D%AD%E5%B7%9E">杭州</a></li>  <li><a href="#">长沙</a></li>
+					<li><a href="https://image.baidu.com/search/index?tn=baiduimage&ipn=r&ct=201326592&cl=2&lm=-1&st=-1&fm=result&fr=&sf=1&fmq=1576665723741_R&pv=&ic=&nc=1&z=&hd=&latest=&copyright=&se=1&showtab=0&fb=0&width=&height=&face=0&istype=2&ie=utf-8&sid=&word=%E8%8B%8F%E5%B7%9E">苏州</a></li>  <li><a href="#">南通</a></li>
+					<li><a href="https://image.baidu.com/search/index?tn=baiduimage&ipn=r&ct=201326592&cl=2&lm=-1&st=-1&fm=result&fr=&sf=1&fmq=1576665851015_R&pv=&ic=&nc=1&z=&hd=&latest=&copyright=&se=1&showtab=0&fb=0&width=&height=&face=0&istype=2&ie=utf-8&sid=&word=%E5%A4%A7%E8%BF%9E">大连</a></li>  <li><a href="#">长春</a></li>
+					<li><a href="https://image.baidu.com/search/index?tn=baiduimage&ipn=r&ct=201326592&cl=2&lm=-1&st=-1&fm=result&fr=&sf=1&fmq=1576665867432_R&pv=&ic=&nc=1&z=&hd=&latest=&copyright=&se=1&showtab=0&fb=0&width=&height=&face=0&istype=2&ie=utf-8&sid=&word=%E9%87%8D%E5%BA%86">重庆</a></li>  <li><a href="#">潍坊</a></li>
+					<li><a href="https://image.baidu.com/search/index?tn=baiduimage&ipn=r&ct=201326592&cl=2&lm=-1&st=-1&fm=result&fr=&sf=1&fmq=1576665888168_R&pv=&ic=&nc=1&z=&hd=&latest=&copyright=&se=1&showtab=0&fb=0&width=&height=&face=0&istype=2&ie=utf-8&ctd=1576665888169%5E00_1519X722&sid=&word=%E5%A4%A9%E6%B4%A5">天津</a></li>  <li><a href="#">西安</a></li>
+					<li><a href="https://image.baidu.com/search/index?tn=baiduimage&ipn=r&ct=201326592&cl=2&lm=-1&st=-1&fm=result&fr=&sf=1&fmq=1576665906054_R&pv=&ic=&nc=1&z=&hd=&latest=&copyright=&se=1&showtab=0&fb=0&width=&height=&face=0&istype=2&ie=utf-8&ctd=1576665906055%5E00_1519X722&sid=&word=%E5%AE%81%E6%B3%A2">宁波</a></li>  <li><a href="#">徐州</a></li>
+					<li><a href="https://image.baidu.com/search/index?tn=baiduimage&ipn=r&ct=201326592&cl=2&lm=-1&st=-1&fm=result&fr=&sf=1&fmq=1576665918190_R&pv=&ic=&nc=1&z=&hd=&latest=&copyright=&se=1&showtab=0&fb=0&width=&height=&face=0&istype=2&ie=utf-8&sid=&word=%E5%8D%97%E4%BA%AC">南京</a></li>  <li><a href="#">嘉兴</a></li>
+					<li><a href="https://image.baidu.com/search/index?tn=baiduimage&ipn=r&ct=201326592&cl=2&lm=-1&st=-1&fm=result&fr=&sf=1&fmq=1576665928910_R&pv=&ic=&nc=1&z=&hd=&latest=&copyright=&se=1&showtab=0&fb=0&width=&height=&face=0&istype=2&ie=utf-8&ctd=1576665928912%5E00_1519X722&sid=&word=%E6%88%90%E9%83%BD">成都</a></li>  <li><a href="#">洛阳</a></li>
+					<li><a href="https://image.baidu.com/search/index?tn=baiduimage&ipn=r&ct=201326592&cl=2&lm=-1&st=-1&fm=result&fr=&sf=1&fmq=1576665949708_R&pv=&ic=&nc=1&z=&hd=&latest=&copyright=&se=1&showtab=0&fb=0&width=&height=&face=0&istype=2&ie=utf-8&sid=&word=%E4%B8%9C%E8%8E%9E">东莞</a></li>  <li><a href="#">昆明</a></li>
+					<li><a href="https://image.baidu.com/search/index?tn=baiduimage&ipn=r&ct=201326592&cl=2&lm=-1&st=-1&fm=result&fr=&sf=1&fmq=1576665983615_R&pv=&ic=&nc=1&z=&hd=&latest=&copyright=&se=1&showtab=0&fb=0&width=&height=&face=0&istype=2&ie=utf-8&sid=&word=%E9%9D%92%E5%B2%9B">青岛</a></li>  <li><a href="#">南阳</a></li>
+	            </ul>
+	        </div>
+	
+    <div data-role="header"  data-position = "fixed">
+          <a href="#revealPanel" data-swipe-close="true" class="ui-btn ui-corner-all ui-icon-user ui-btn-icon-notext"></a>  
+          <a href="#overlayPanel" data-transition="slide" class="ui-btn ui-corner-all ui-icon-search ui-btn-icon-notext"></a>
+         	  
+		  <p align="center"><font color="blue"  size="4">我们一起去旅行吧 !</font>&nbsp;&nbsp;&nbsp;&nbsp;
+		  <a href="map.html" style="margin-left: 50px;" data-ajax = "false" data-swipe-close="true" class="ui-btn ui-corner-all ui-btn-left ui-icon-location ui-btn-icon-notext"></a>
+		  
+		  
+		  <a href="demo_login.html" style="text-decoration: none; color: #FF0000;" data-ajax = "false">登录 /</a>
+		  <a href="sign.html" style="text-decoration: none; color: #FF0000;" data-rel='dialog' data-transition="slideup">注册</a></p>
+		  
+    </div>
+	
+
+<div data-role="content">	
+    <div class="mfw-focus" id="_j_mfw_focus">
+    <div class="show-slider" id="_j_top_pic_container">
+        <ul class="show-image">
+			
+                        <li class="first">
+               <img src="https://p1-q.mafengwo.net/s15/M00/9E/EE/CoUBGV30yzGATTEoABrpZaGmXFg597.png?imageMogr2%2Finterlace%2F1"></a>
+                
+                    <div class="date">
+                        <span class="day">15</span>/Dec.2019
+                    </div>
+                    <h3>车轮不息，藏北荒原骑行穿越之旅</h3>
+                </a>
+                <p class="show-info">图片来自于<font color="#FF9900">西藏</font>，此目的地共收藏了<font color="#FF9900">2515709</font>张西藏</font>图片。本片由<font color="#FF9900">白宇</font>荣誉出品！</p>
+            </li>
+			
+                        <li>
+               <img src="https://n1-q.mafengwo.net/s15/M00/7A/13/CoUBGV3zbi-AB8QnACF4BWhatiw994.png?imageMogr2%2Finterlace%2F1"></a>
+             
+                    <div class="date">
+                        <span class="day">14</span>/Dec.2019
+                    </div>
+                    <h3>我赴荷兰，为躬行一次纸上读来（附荷兰新手攻略）</h3>
+                </a>
+                <p class="show-info">图片来自于<font color="#FF9900">荷兰</font>，此目的地共收藏了<font color="#FF9900">114215</font>张荷兰</font>图片。本片由<font color="#FF9900">四月不跳舞</font>荣誉出品！</p>
+            </li>
+			
+                        <li>
+                <img src="https://n1-q.mafengwo.net/s15/M00/0A/8F/CoUBGV3yKsiAQ_68ABz4I2nXU-Q814.png?imageMogr2%2Finterlace%2F1"></a>
+                
+                    <div class="date">
+                        <span class="day">13</span>/Dec.2019
+                    </div>
+                    <h3>【背包骑行】缅甸摩托日记，这是一个未曾到过的缅甸。</h3>
+                </a>
+                <p class="show-info">图片来自于<font color="#FF9900">缅甸</font>，此目的地共收藏了<font color="#FF9900">232266</font>张缅甸</font>图片。本片由<font color="#FF9900">Rex-Bang。</font>荣誉出品！</p>
+            </li>
+			
+                        <li>
+                <img src="https://b1-q.mafengwo.net/s15/M00/6C/98/CoUBGV3wzPiAEP1lAClWqbIHuSM936.png?imageMogr2%2Finterlace%2F1"></a>
+                
+                    <div class="date">
+                        <span class="day">12</span>/Dec.2019
+                    </div>
+                    <h3>南京寻秋：金陵十二时辰，一座古早味的城..</h3>
+                </a>
+                <p class="show-info">图片来自于<font color="#FF9900">南京</font>，此目的地共收藏了<font color="#FF9900">932268</font>张南京</font>图片。本片由<font color="#FF9900">Lucifer同学</font>荣誉出品！</p>
+            </li>
+			
+                        <li>
+                <img src="https://p1-q.mafengwo.net/s15/M00/25/BF/CoUBGV3vp22AKrrMAB2TF8lN09k798.png?imageMogr2%2Finterlace%2F1"></a>
+                
+                    <div class="date">
+                        <span class="day">11</span>/Dec.2019
+                    </div>
+                    <h3>森林与峡湾之歌，挪威金秋6日治愈之旅</h3>
+                </a>
+                <p class="show-info">图片来自于<font color="#FF9900">挪威</font>，此目的地共收藏了<font color="#FF9900">86626</font>张挪威</font>图片。本片由<font color="#FF9900">小食</font>荣誉出品！</p>
+            </li>
+                    </ul>
+        <ul class="show-nav">
+                            <li><a href="javascript:"><img src="https://n1-q.mafengwo.net/s15/M00/9E/C3/CoUBGV30yxuAIkKBAAPJCIeWXPo843.png?imageMogr2%2Fthumbnail%2F%21108x67r%2Fgravity%2FCenter%2Fcrop%2F%21108x67%2Fquality%2F90" height="62" width="110"><span></span></a></li>
+                            <li><a href="javascript:"><img src="https://b1-q.mafengwo.net/s15/M00/79/FD/CoUBGV3zbh2ASkg2AAajHBxKo6k315.png?imageMogr2%2Fthumbnail%2F%21108x67r%2Fgravity%2FCenter%2Fcrop%2F%21108x67%2Fquality%2F90" height="62" width="110"><span></span></a></li>
+                            <li><a href="javascript:"><img src="https://n1-q.mafengwo.net/s15/M00/0A/67/CoUBGV3yKrKAOgyBAAT5s0kdyY0018.png?imageMogr2%2Fthumbnail%2F%21108x67r%2Fgravity%2FCenter%2Fcrop%2F%21108x67%2Fquality%2F90" height="62" width="110"><span></span></a></li>
+                            <li><a href="javascript:"><img src="https://p1-q.mafengwo.net/s15/M00/66/BB/CoUBGV3wyZSAb564AAd6wtlL9XQ911.png?imageMogr2%2Fthumbnail%2F%21108x67r%2Fgravity%2FCenter%2Fcrop%2F%21108x67%2Fquality%2F90" height="62" width="110"><span></span></a></li>
+                            <li><a href="javascript:"><img src="https://p1-q.mafengwo.net/s15/M00/25/95/CoUBGV3vp1mAT5GtAASYlREtpBE014.png?imageMogr2%2Fthumbnail%2F%21108x67r%2Fgravity%2FCenter%2Fcrop%2F%21108x67%2Fquality%2F90" height="62" width="110"><span></span></a></li>                  
+        <br><br>
+		<a style="text-decoration: none; color: #FF0000;" href="booking.html" data-rel='dialog' data-transition="turn"><font size="4" ><i>预定车票</i></font></a>
+		</ul>
+    </div>
+   </div>
+   
+   <center><a><font size="4" color="blueviolet" style="font-weight: 900;"><i>热门城市</i></font></a><br></center><br>
+   <div data-role="navbar" >
+         <ul>
+           <li><a href="https://image.baidu.com/search/index?tn=baiduimage&ct=201326592&lm=-1&cl=2&ie=gb18030&word=%B1%B1%BE%A9&fr=ala&ala=1&alatpl=adress&pos=0&hs=2&xthttps=111111">北京</a></li>
+           <li><a href="https://image.baidu.com/search/index?tn=baiduimage&ct=201326592&lm=-1&cl=2&ie=gb18030&word=%C9%CF%BA%A3&fr=ala&ala=1&alatpl=adress&pos=0&hs=2&xthttps=111111">上海</a></li>
+           <li><a href="http://image.baidu.com/search/index?tn=baiduimage&ps=1&ct=201326592&lm=-1&cl=2&nc=1&ie=utf-8&word=%E5%B9%BF%E5%B7%9E">广州</a></li>
+		   <li><a href="https://image.baidu.com/search/index?tn=baiduimage&ipn=r&ct=201326592&cl=2&lm=-1&st=-1&fm=result&fr=&sf=1&fmq=1576592875040_R&pv=&ic=&nc=1&z=&hd=&latest=&copyright=&se=1&showtab=0&fb=0&width=&height=&face=0&istype=2&ie=utf-8&sid=&word=%E6%B7%B1%E5%9C%B3">深圳</a></li>
+		   <li><a href="https://image.baidu.com/search/index?tn=baiduimage&ipn=r&ct=201326592&cl=2&lm=-1&st=-1&fm=result&fr=&sf=1&fmq=1576592890849_R&pv=&ic=&nc=1&z=&hd=&latest=&copyright=&se=1&showtab=0&fb=0&width=&height=&face=0&istype=2&ie=utf-8&sid=&word=%E9%A6%99%E6%B8%AF">香港</a></li>
+         </ul>
+    </div><br>
+ 
+ <center><a><font size="4" color="FF00FF" style="font-weight: 900;"><i>分类标签</i></font></a><br></center><br>
+ 
+    <div class="box2">
+
+	 	<div class="he_border1">
+	 		<div style="display: inline;"><img class="he_border1_img" src="images/pro_1.jpg" ></div>
+	 		<div class="he_border1_caption">
+	 			<h3 class="he_border1_caption_h">周边游</h3>
+	 			<p class="he_border1_caption_p">带你发现周边的美景</p>
+	 			<a  href="around.html" rel="external" data-rel='dialog' data-transition="turn"></a>
+	 		</div>
+	 	</div>
+	 
+	 	<div class="he_3DFlipY">
+	 		<div class="he_3DFlipY_inner">
+	 			<div class="he_3DFlipY_img">
+	 				<img src="images/长城.JPG" ">
+	 			</div>
+	 			<div class="he_3DFlipY_caption">
+	 				<h3>国内游</h3>
+	 				<p>我想带你走遍全中国</p>
+	 			</div>
+	 			<a href="domestic.html" rel="external" data-rel='dialog' data-transition="turn"></a>
+	 		</div>
+	 	</div>
+	
+	 	<div class="he_ZoomInImg">
+	 		<img class="he_ZoomInImg_img" src="images/伦敦.jpg"  >
+	 		<div class="he_ZoomInImg_caption">
+	 			<h3 class="he_ZoomInImg_caption_h">出境游</h3>
+	 			<p class="he_ZoomInImg_caption_p">世界这么大，我想去看看</p>
+	 			<a href="abroad.html" rel="external" data-rel='dialog' data-transition="turn"></a>
+	 		</div>
+	 	</div>
+	
+	 	<div class="he_slideCaptionDown">
+	 		<img class="he_slideCaptionDown_img" src="images/plane.jpg">
+	 		<div class="he_slideCaptionDown_caption">
+	 			<h3 class="he_slideCaptionDown_caption_h">签证办理</h3>
+	 			<p class="he_slideCaptionDown_caption_p">你离目的地只差了一个签证</p>
+	 			<a  href="visa.html" rel="external" data-rel='dialog' data-transition="turn"></a>
+	 		</div>
+	   </div>
+
+	</div> 
+	 
+	<br><br><br>
+	
+	<div>
+	<div style="width: 40%; float: right;">
+	<a><font size="4" color="#33FF33" style="font-weight: 900;"><i>旅行游记</i></font></a>
+	</div>
+	
+	<div style="width: 40%; float: right;">
+	<a><font size="4" color="#33FFFF" style="font-weight: 900;"><i>热门旅游地</i></font></a>
+	</div>
+	</div>
+	<br><br><br>
+	 
+	<div class="box3"> 	 	 	
+			<div class="he_border1">
+				<div style="display: inline;"><img class="he_border1_img" src="images/泰山.jpg" ></div>				
+			</div>
+				 
+			<div style="padding: 10px;">
+				<p style="text-indent: 2em;">					
+					泰山，又名岱山、岱宗、东岳、为中国著名的五岳之一，位于山东省中部，绵亘于泰安、济南、淄博三市之间，
+					总面积2.42万公顷。主峰玉皇顶海拔1545米，气势雄伟磅礴，有“五岳之首”、“五岳之尊”、“天下第一山”之称。
+					是世界自然与文化遗产，世界地质公园，国家级风景名胜区，全国文明风景旅游区。 
+					泰山被古人视为“直通帝座”的天堂，成为百姓崇拜，帝王告祭的神山，有“泰山安，四海皆安”的说法,是“天人合一”思想的寄托之地，
+					是中华民族精神的家园。
+				</p>
+			</div>	
+					
+					<div class="he_border1">
+						<div style="display: inline;"><img class="he_border1_img" src="images/西安.jpg" ></div>				
+					</div>
+						 
+					<div style="padding: 10px;">
+						<p style="text-indent: 2em;">					
+							西安，一个在最近几年我来了三四次的地方，一个越来越让我着迷的地方。我着迷于它的古色古香、着迷于它的处处皆故事。走在西安，徜徉在古城的四周，感受着秦砖汉瓦，秦时明月汉时光;恍惚间，仿佛看见各国使节齐聚长安等待拜见天子的画面。十三个王朝在这里建都，厚重的历史文化底蕴，悠久的历史文化积淀使西安当之无愧地享有“天然历史博物馆”之誉。
+						</p>
+						<div>
+						    <span class="raider-bottom-sub">
+						        <img src="images/index_like.png" alt="">
+						        <font size="5px">2.9万</font>
+						    </span>
+						        <span class="raider-bottom-sub">
+						        <img src="images/index_dislike.png" alt="">
+						        <font size="5px">1200</font>
+						    </span>
+						        <span class="raider-bottom-sub">
+						        <img src="images/index_love.png" alt="">
+						        <font size="5px">2200</font>
+						    </span>
+						</div>
+					</div>	
+	</div>
+	
+	<br><br>
+	
+	<div class="box3">
+		
+			<div class="he_border1">
+				<div style="display: inline;"><img class="he_border1_img" src="images/丽江古城.jpg" ></div>				
+			</div>
+				 
+			<div style="padding: 10px;">
+				<p style="text-indent: 2em;">				
+					丽江古城位于云南省丽江市古城区，又名大研镇，坐落在丽江坝中部，始建于宋末元初（公元13世纪后期），地处云贵高原，
+					面积为7.279平方公里。丽江古城内的街道依山傍水修建，以红色角砾岩铺就，有四方街、木府、五凤楼、黑龙潭、
+					文昌宫、王丕震纪念馆、雪山书院、王家庄基督教堂、方国瑜故居、白马龙潭寺、顾彼得旧居、净莲寺、普贤寺等景点。					 
+					丽江古城有着多彩的地方民族习俗和娱乐活动.丽江古城体现了中国古代城市建设的成就，是中国民居中具有鲜明特色和风格的类型之一
+				</p>
+			</div>		
+				
+				<div class="he_border1">
+					<div style="display: inline;"><img class="he_border1_img" src="images/天津.jpg" ></div>				
+				</div>
+					 
+				<div style="padding: 10px;">
+					<p style="text-indent: 2em;">					
+						最近经常感觉到很疲惫，仿佛一年积累的疲劳感都要在这年尾这段时间爆发出来，我感觉我急需一次旅行来放松心情，于是跟女朋友商量了一下，最终定下在元旦假期的三天里去天津玩一趟。						
+						天津给我的印象是它真的很小，非常适合做为周末散心的好去处，如果时间安排的很紧凑的话，一天多就可以把主要景点玩一遍了，但是我们这次旅行的目的主要是以放松为主，所以把旅行时间定为三天，第一天中午抵达天津，第三天中午返回北京，虽说时间安排的很轻松，但是最后一天还是感觉累的不行。
+					</p>
+					<div>
+					    <span class="raider-bottom-sub">
+					        <img src="images/index_like.png" alt="">
+					        <font size="5px">2.9万</font>
+					    </span>
+					        <span class="raider-bottom-sub">
+					        <img src="images/index_dislike.png" alt="">
+					        <font size="5px">1200</font>
+					    </span>
+					        <span class="raider-bottom-sub">
+					        <img src="images/index_love.png" alt="">
+					        <font size="5px">2200</font>
+					    </span>
+					</div>
+				</div>	
+	</div>
+	
+	<br><br>
+	
+	<div class="box3">
+			<div class="he_border1">
+				<div style="display: inline;"><img class="he_border1_img" src="images/杭州.jpg" ></div>				
+			</div>
+				 
+			<div style="padding: 10px;">
+				<p style="text-indent: 2em;">				
+					杭州，简称“杭”，古称临安、钱塘，是浙江省省会、副省级市、杭州都市圈核心城市，国务院批复确定的浙江省省会和全省经济、
+					文化、科教中心、长江三角洲中心城市之一 。杭州位于中国华东地区、东南沿海、浙江省北部、钱塘江下游、京杭大运河南端，是环杭州湾大湾区核心城市  、
+					沪嘉杭G60科创走廊中心城市 、国际重要的电子商务中心 。杭州人文古迹众多，西湖及其周边有大量的自然及人文景观遗迹，
+					具代表性的有西湖文化、良渚文化、丝绸文化、茶文化，以及流传下来的许多故事传说。
+				</p>
+			</div>	
+					
+					<div class="he_border1">
+						<div style="display: inline;"><img class="he_border1_img" src="images/郑州.jpg" ></div>				
+					</div>
+						 
+					<div style="padding: 10px;">
+						<p style="text-indent: 2em;">					
+							坐了3个多小时的车，终于抵达了郑州，哇！这么高的塔，我不仅赞叹道。全景画馆是世界上最大的全景画馆，主要描绘有河南十八个省辖市的著名风光名胜，高科技的声光电烘托，让我感受到了强烈的视觉震撼力和冲击力^o^
+ 最让我惊讶的是室外观光层的壮观，在高达101层的中原福塔上一睹郑州化地域风光，塔上风很大，好像一不小心就会被刮飞haha~印象深刻的是云中漫步，99层的云中漫步是以玻璃为面，让我们在云中享受漫步的感觉
+						</p>
+						<div>
+						    <span class="raider-bottom-sub">
+						        <img src="images/index_like.png" alt="">
+						        <font size="5px">2.9万</font>
+						    </span>
+						        <span class="raider-bottom-sub">
+						        <img src="images/index_dislike.png" alt="">
+						        <font size="5px">1200</font>
+						    </span>
+						        <span class="raider-bottom-sub">
+						        <img src="images/index_love.png" alt="">
+						        <font size="5px">2200</font>
+						    </span>
+						</div>
+					</div>	
+	</div>
+	
+	<br><br>
+	
+	<div class="box3">
+			<div class="he_border1">
+				<div style="display: inline;"><img class="he_border1_img" src="images/哈尔滨.jpg" ></div>				
+			</div>
+				 
+			<div style="padding: 10px;">
+				<p style="text-indent: 2em;">					
+					哈尔滨，别称“冰城”，是黑龙江省省会、副省级市、哈尔滨都市圈核心城市，国务院批复确定的中国东北地区重要的中心城市、
+					国家重要的制造业基地 。哈尔滨地处中国东北地区、东北亚中心地带，是中国东北北部政治、经济、文化中心 ，被誉为欧亚大陆桥的明珠，
+					是第一条欧亚大陆桥和空中走廊的重要枢纽，哈大齐工业走廊的起点，国家战略定位的沿边开发开放中心城市、东北亚区域中心城市及“对俄合作中心城市”。
+				</p>
+			</div>		
+				
+				<div class="he_border1">
+					<div style="display: inline;"><img class="he_border1_img" src="images/洛阳.jpg" ></div>				
+				</div>
+					 
+				<div style="padding: 10px;">
+					<p style="text-indent: 2em;">					
+						在诗文里，在历史书上，听过看过了那么多次洛阳，终于来了这座向往了很久的城市。	
+						西安到洛阳，高铁一个半小时，不过一场堵车的时间，就跨越了两座古城。	
+						龙门石窟，30度的高温和无死角的日照不是很友好，没伞没防晒的我有些心累。不过看着那些石窟雕像，一股历史的沧桑便瞬间传来。不管是朝堂全盛时期的宏伟杰作，还是因为政权突变而戛然而止的半成品，或是因为战争和荒谬而残缺不堪的破损石刻，不管它们背后的故事多么的惊心动魄，对于现代人来说都只有遐想和叹息了。
+					</p>
+					<div>
+					    <span class="raider-bottom-sub">
+					        <img src="images/index_like.png" alt="">
+					        <font size="5px">2.9万</font>
+					    </span>
+					        <span class="raider-bottom-sub">
+					        <img src="images/index_dislike.png" alt="">
+					        <font size="5px">1200</font>
+					    </span>
+					        <span class="raider-bottom-sub">
+					        <img src="images/index_love.png" alt="">
+					        <font size="5px">2200</font>
+					    </span>
+					</div>
+				</div>	
+	</div>
+	
+	<br><br>
+	
+	<div class="box3">
+			<div class="he_border1">
+				<div style="display: inline;"><img class="he_border1_img" src="images/西藏.jpg" ></div>				
+			</div>
+				 
+			<div style="padding: 10px;">
+				<p style="text-indent: 2em;">				
+					西藏，简称“藏”。西藏自治区，首府拉萨市，位于中华人民共和国西南边陲，是中国五个少数民族自治区之一。
+					西藏位于青藏高原西南部，平均海拔在4000米以上，素有“世界屋脊”之称。
+					是中国西南边陲的重要门户.西藏是中国领土不可分割的一部分。自元朝始，中央政权始终对西藏行使着有效管辖。
+					藏族人民是中华民族大家庭中的重要一员。	
+					西藏以其雄伟壮观、神奇瑰丽的自然风光闻名。它地域辽阔，地貌壮观、资源丰富。自古以来，
+					这片土地上的人们创造了丰富灿烂的民族文化。
+				</p>
+			</div>		
+				
+				<div class="he_border1">
+					<div style="display: inline;"><img class="he_border1_img" src="images/泉州.jpg" ></div>				
+				</div>
+					 
+				<div style="padding: 10px;">
+					<p style="text-indent: 2em;">							
+					我一直非常向往去一次福建泉州，因为读到古代欧洲人马可波罗的游记时，提到了这座城市，但中国人对它的了解却不深。这让我感到非常好奇，这到底是座怎样的古城？于是决定抽一个周末的时间来一探究竟。				
+					据说泉州的兴盛与五胡乱华时期陆上丝绸之路受到阻碍有关，阿拉伯人逐步开始转而走印度洋的海上丝绸之路而来到泉州。但这样一个昔日与埃及亚历山大港口齐名，甚至货运周转量远胜之的伟大城市，很多阿拉伯人到中国必去的城市，是为何衰落的呢？这是我此行心中一直存在的疑问。
+					</p>
+					<div>
+					    <span class="raider-bottom-sub">
+					        <img src="images/index_like.png" alt="">
+					        <font size="5px">2.9万</font>
+					    </span>
+					        <span class="raider-bottom-sub">
+					        <img src="images/index_dislike.png" alt="">
+					        <font size="5px">1200</font>
+					    </span>
+					        <span class="raider-bottom-sub">
+					        <img src="images/index_love.png" alt="">
+					        <font size="5px">2200</font>
+					    </span>
+					</div>
+				</div>	
+	</div>
+	
+	<br><br>
+	
+	<div class="box3">
+			<div class="he_border1">
+				<div style="display: inline;"><img class="he_border1_img" src="images/三亚.jpg" ></div>				
+			</div>
+				 
+			<div style="padding: 10px;">
+				<p style="text-indent: 2em;">					
+					三亚，简称崖，古称崖州，别称鹿城。是海南省下辖地级市，位于海南岛的最南端。三亚东邻陵水县，西接乐东县，
+					北毗保亭县，南临南海. 三亚是具有热带海滨风景特色的国际旅游城市，又被称为“东方夏威夷”。2016年6月14日，
+					中国科学院对外发布《中国宜居城市研究报告》，三亚宜居指数在全国40个城市中位居第三。 
+					2016年9月，三亚入选“中国地级市民生发展100强。2017年2月，三亚入选第三批国家低碳城市试点之一。
+					三亚也是同时入选中国特色魅力城市200强及世界特色魅力城市200强。
+				</p>
+			</div>	
+					
+					<div class="he_border1">
+						<div style="display: inline;"><img class="he_border1_img" src="images/拉萨.jpg" ></div>				
+					</div>
+						 
+					<div style="padding: 10px;">
+						<p style="text-indent: 2em;">					
+							终于站在了布达拉宫的主殿前面，大家都抓紧时间进行最后的拍照，因为进入主殿就不让照相了。其实在刚到藏地时导游就告诫我们没事不要随意拍照，因为藏地的居民认为照相有可能会将他们的灵魂带走，而对佛像来说，拍照更是对佛像的不尊重，因此进入主殿后照相是被禁止的。							
+							简单照了几张相片，顺着一个漫长的阶梯走了进去。由于时间隔得很长，再加上没有照片帮我回忆，现在残留在我脑海里的记忆，剩下了几个关键词：庄严，神圣，奢华。庄严和神圣应该是每个寺庙都具备的。
+						</p>
+						<div>
+						    <span class="raider-bottom-sub">
+						        <img src="images/index_like.png" alt="">
+						        <font size="5px">2.9万</font>
+						    </span>
+						        <span class="raider-bottom-sub">
+						        <img src="images/index_dislike.png" alt="">
+						        <font size="5px">1200</font>
+						    </span>
+						        <span class="raider-bottom-sub">
+						        <img src="images/index_love.png" alt="">
+						        <font size="5px">2200</font>
+						    </span>
+						</div>
+					</div>	
+	</div>
+   
+    <font size="3"><a href="https://www.mafengwo.cn/" style="text-decoration: none;">更多>></a></font>
+   
+</div>
+
+    <!-- ---------------------------------------------- -->
+	
+	
+	<br>
+	<hr>
+	<br>
+	
+	<div>
+		<center>
+	    <a style="text-decoration: none; color: #000000;"  href="http://china.makepolo.com/">马可波罗</a>
+		<a style="text-decoration: none; color: #000000;" href="http://www.onlylady.com/">Onlylady女人志</a>
+		<a style="text-decoration: none; color: #000000;" href="http://trip.elong.com/">艺龙旅游指南</a>
+		<a style="text-decoration: none; color: #000000;" href="http://www.cncn.com">欣欣旅游网</a>
+		<a style="text-decoration: none; color: #000000;" href="http://www.8264.com/">户外运动</a>
+		<a style="text-decoration: none; color: #000000;" href="http://www.yue365.com/">365音乐网</a>
+		<a style="text-decoration: none; color: #000000;" href="http://ishare.iask.sina.com.cn/">爱问共享资料</a>
+		<a style="text-decoration: none; color: #000000;" href="http://www.uzai.com/">旅游网</a>
+		<a style="text-decoration: none; color: #000000;" href="http://www.zongheng.com/">小说网</a>
+		<a style="text-decoration: none; color: #000000;" href="http://www.xuexila.com/">学习啦</a>
+		<a style="text-decoration: none; color: #000000;" href="http://www.yododo.com">游多多自助游</a>
+		<a style="text-decoration: none; color: #000000;" href="http://www.zhcpic.com/">问答</a>
+		<a style="text-decoration: none; color: #000000;" href="http://huoche.mafengwo.cn/">火车时刻表</a>
+		<a style="text-decoration: none; color: #000000;" href="http://www.lvmama.com">驴妈妈旅游网</a>
+		<a style="text-decoration: none; color: #000000;" href="http://www.haodou.com/">好豆美食网</a>	
+		</center>
+		<br>
+		<center>
+		<a style="text-decoration: none; color: #000000;" href="http://www.taoche.com/">二手车</a>
+		<a style="text-decoration: none; color: #000000;" href="http://www.lvye.cn">绿野户外</a>
+		<a style="text-decoration: none; color: #000000;" href="http://www.tuniu.com/">途牛旅游网</a>
+		<a style="text-decoration: none; color: #000000;" href="http://www.mapbar.com/">图吧</a>
+		<a style="text-decoration: none; color: #000000;" href="http://www.chnsuv.com">SUV联合越野</a>
+		<a style="text-decoration: none; color: #000000;" href="http://www.uc.cn/">手机浏览器</a>
+		<a style="text-decoration: none; color: #000000;" href="http://sh.city8.com/">上海地图</a>
+		<a style="text-decoration: none; color: #000000;" href="http://www.tianqi.com/">天气预报查询</a>
+		<a style="text-decoration: none; color: #000000;" href="http://www.ly.com/">同程旅游</a>
+		<a style="text-decoration: none; color: #000000;" href="http://www.tieyou.com/">火车票</a>
+		<a style="text-decoration: none; color: #000000;" href="https://daxue.mafengwo.cn/#/">马蜂窝大学</a>
+		<a style="text-decoration: none; color: #000000;" href="https://m.weelv.com">马尔代夫旅游</a>
+		<a style="text-decoration: none; color: #000000;" href="http://www.yunos.com/">YunOS</a>
+		<a style="text-decoration: none; color: #000000;" href="http://you.ctrip.com/">携程旅游</a>
+		<a style="text-decoration: none; color: #000000;" href="http://www.jinjiang.com">锦江旅游</a>
+		<a style="text-decoration: none; color: #000000;" href="http://www.huoche.net/">火车时刻表</a>	
+		</center>
+		<br>
+		<center>
+		<a style="text-decoration: none; color: #000000;" href="http://www.tripadvisor.cn/">TripAdvisor</a>
+	    <a style="text-decoration: none; color: #000000;" href="http://www.tianxun.com/">天巡网</a>
+		<a style="text-decoration: none; color: #000000;" href="http://www.mayi.com/">短租房</a>
+		<a style="text-decoration: none; color: #000000;" href="http://www.zuzuche.com">租租车</a>
+		<a style="text-decoration: none; color: #000000;" href="http://www.5fen.com/">五分旅游网</a>
+		<a style="text-decoration: none; color: #000000;" href="http://www.zhuna.cn/">酒店预订</a>
+		<a style="text-decoration: none; color: #000000;" href="http://www.ailvxing.com">爱旅行网</a>
+		<a style="text-decoration: none; color: #000000;" href="http://360.mafengwo.cn/all.php">旅游</a>
+		<a style="text-decoration: none; color: #000000;" href="http://vacations.ctrip.com/">旅游网</a>
+		<a style="text-decoration: none; color: #000000;" href="http://www.wed114.cn">wed114结婚网</a>
+		<a style="text-decoration: none; color: #000000;" href="http://www.chexun.com/">车讯网</a>
+		<a style="text-decoration: none; color: #000000;" href="http://www.aoyou.com/">遨游旅游网</a>
+		<a style="text-decoration: none; color: #000000;" href="http://www.91.com/">手机</a>
+		</center>
+		<br>
+		<center>
+		<a href="http://www.mafengwo.cn/s/link.html" style="text-decoration: none;">更多友情链接&gt;&gt;</a>
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+	     <a href="http://www.baidu.com" target="_blank" rel="nofollow" style="text-decoration: none;" class="m_l_10">帮助中心</a>
+		</center>
+	    
+	</div>
+		
+	<div >
+		<center>
+	    <p>
+	                <span class="m_l_10">违法和不良信息举报电话: 15638170821 & 举报邮箱: 2300217596@qq.com &</span>
+	    
+	        <span class="m_l_10"> 客服：国内</span><span class="highlight">15638170821 & </span>
+	        <span class="m_l_10">海外</span> <span class="highlight">+86-10-15638170821</span>
+	    </p>
+		</center>
+	</div>
+	
+	
+	<hr>
+	
+	
+	<!-- ---------------------------------------------- -->
+	
+	<center><h2>designedby@wangchunlei</h2>
+	<p><font color="#FF0000" size="3">我是有底线的！</font></p></center>
+	
+	
+    <div id="footer" data-role="footer" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li>
+                            <a href="chat-list.html" data-ajax="false" data-icon="comment" onclick="goTo('content.html')">
+								消息<span  class="ui-li-count" ><font color="#FF0000">2</font></span></a>
+                             
+						</li>
+                        <li>
+                            <a href="home-page.html" data-ajax="false"  data-icon="user" onclick="goTo('content1.html')">我的</a>
+                        </li>
+                        <li>
+                            <a href="dynamic.html" data-ajax="false" data-icon="star" onclick="goTo('user.html')">动态</a>
+                        </li>
+                    </ul>
+                </div>
+     </div>
+
+
+</div>
+
+<script type="text/javascript">
+    
+    var $topPicContainer = $('#_j_top_pic_container'),
+        topPicSlideCnt = $topPicContainer.find('.show-image');
+
+    function respondTopPicSize(ev) {
+        var clientWidth = $(window).width(),
+            picHeight = Math.round(clientWidth / 3);
+        $topPicContainer.height(picHeight);
+        topPicSlideCnt.find('img').each(function(idx, ele) {
+            var $img = $(ele),
+                imgHeight = parseInt($img.css('height'), 10);
+            if(imgHeight > picHeight) {
+                $img.css('marginTop', -Math.round((imgHeight - picHeight) / 2));
+            }
+        });
+    }
+    $(window).on('resize', respondTopPicSize).trigger('resize');
+</script>
+
+<script language="javascript" type="text/javascript">
+if (typeof M !== "undefined" && typeof M.loadResource === "function") {
+M.loadResource("https://js.mafengwo.net/js/cv/js+Dropdown:js+pageletcommon+pageHeadUserInfoWWWNormal:js+jquery.tmpl:js+M+module+InputListener:js+M+module+SuggestionXHR:js+M+module+DropList:js+M+module+Suggestion:js+M+module+MesSearchEvent:js+SiteSearch:js+AHeader:js+jquery.lazyload:js+M+module+Pagination:js+index+ControllerRecommend:js+M+module+ClickToggle:js+M+module+Slider:js+CitySelectPop:js+xdate:js+hotel+module+FestivalDateConfig:js+jquery-ui-core:js+jquery-ui-datepicker:js+hotel+module+DateRangePicker:js+hotel+module+Datepicker:js+M+module+Storage:js+hotel+module+ModuleProvider:js+hotel+module+BookingDate:js+M+module+dialog+Layer:js+M+module+dialog+DialogBase:js+M+module+dialog+Dialog:js+M+module+dialog+alert:js+hotel+module+Log:js+hotel+module+Search_v2:js+AIndex:js+module+app+Page:js+M+module+Toggle:js+index+AGinfoSearch:js+M+module+PageAdmin:js+M+module+Cookie:js+M+module+ResourceKeeper:js+jquery.jgrowl.min:js+AMessage:js+M+module+FrequencyVerifyControl:js+M+module+FrequencySystemVerify:js+ALogin:js+M+module+ScrollObserver:js+M+module+QRCode:js+AToolbar:js+ACnzzGaLog:js+ARecruit:js+ALazyLoad^YlVUQw^1575861263.js");
+}
+</script>
+
+</body>
+</html>

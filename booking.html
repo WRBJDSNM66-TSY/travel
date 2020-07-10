@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>机票、车票、酒店预订表单</title>
+<link type="text/css" rel="stylesheet" href="css/style.css"/>
+
+    <link rel="stylesheet" href="https://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	<script src="https://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body>
+	
+	<div data-role="page">
+
+		<div data-role="content" id="booking">
+	
+<center><h1 >畅游世界</h1></center>
+<br>
+
+<div style="width: 100%;">
+	
+<div style="float: left; width: 50%;">	
+<input id="flight" type="checkbox" />
+<label for="flight"><center>机票</center></label>
+</div>
+
+<div style="width: 50%; float: right;">
+<input id="car" type="checkbox" />
+<label for="car"><center>车票</center></label>
+</div>
+
+</div>
+
+<br><br><br>
+
+<center><p class="notify">请选择您的预订选项</p></center>
+
+<div class="counter select">
+	<label> 从哪儿出发：</label>
+  <select id="from">
+    <option value="上海" selected>
+    上海</option>
+    <option value="新加坡">
+    新加坡</option>
+    <option value="雅加达" >
+    雅加达</option>
+  <option value="吉隆坡" >
+    吉隆坡</option>
+    <option value="曼谷" >
+    曼谷</option>
+  <option value="北京" >
+    北京</option>
+    <option value="东京" >
+    东京</option>
+    <option value="香港" >
+    香港</option>
+    <option value="悉尼" >
+    悉尼</option>
+    <option value="深圳" >
+    深圳</option>
+    <option value="首尔" >
+    首尔</option>
+    <option value="台北" >
+    台北</option>
+ </select>
+  
+</div>
+
+<div class="counter select">
+	<label> 去哪儿玩啊：</label>
+  <select id="to">
+    <option value="上海" >
+    上海</option>
+    <option value="新加坡" >
+    新加坡</option>
+    <option value="雅加达" >
+    雅加达</option>
+  <option value="吉隆坡" >
+    吉隆坡</option>
+    <option value="曼谷" >
+    曼谷</option>
+  <option value="北京" >
+    北京</option>
+    <option value="东京" >
+    东京</option>
+    <option value="香港" >
+    香港</option>
+    <option value="悉尼" selected>
+    悉尼</option>
+    <option value="深圳" >
+    深圳</option>
+    <option value="首尔" >
+    首尔</option>
+    <option value="台北" >
+    台北</option>
+ </select>
+  
+</div>
+
+<br><br>
+
+<!-- First Name Field -->
+<label for="first-name">您的姓名</label>
+<input id="first-name" type="text" autocomplete="given-name" required />
+<span></span>
+
+<label for="last-name">手机号码</label>
+<input id="last-name" type="text" autocomplete="family-name" required>
+<span></span>
+
+<br><br>
+
+<div class="counter date">
+  <label for="date">您的出发日期</label>
+  <input id="date" type="date" autocomplete="todays-date" required>  
+  <span></span>
+</div>
+
+<div class="counter quantity-container">
+	<label for="people">人数</label>
+  <input id="people" type="number" max="99" min="0" step="1" class="quantity-amount" name="" value="1" maxlength="2" />
+  <span></span>
+</div>
+
+<div class="counter quantity-container">
+	<label for="days">天数</label>
+  <input id="days" type="number" class="quantity-amount" name="" value="5" min="0" max="365" step="1" />
+ 
+  <span></span>
+</div>
+
+<center><a href="index.html" style="text-decoration: none;"><font color="#901490" size="5">立即预订</font></a></center>
+
+</div>
+</div>
+</body>
+
+<script type="text/javascript" src="js/index.js"></script>
+</html>

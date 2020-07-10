@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>个性签名</title>
+	<<meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+   <link rel="stylesheet" href="http://demos.jquerymobile.com/1.4.5/css/themes/default/jquery.mobile-1.4.5.min.css">
+   <script src="http://demos.jquerymobile.com/1.4.5/js/jquery.js"></script>
+   <script src="http://demos.jquerymobile.com/1.4.5/js/jquery.mobile-1.4.5.min.js"></script>
+   
+  <style>
+    *{
+      font-family: 微软雅黑;
+    }
+
+    #content{
+      height:100px!important;
+    }
+  </style>
+</head>
+<body>
+    <div data-role="page" id="pageone">
+      <div data-role='header'>
+        <h1>修改您的个性签名</h1> 
+      </div>
+      <div data-role="content">
+		  
+        <form action="#" method='post' data-transition="slide" data-ajax='false'>
+          <label for="username">个性签名:</label>
+          <input type="text" name='sign' id='sign'>
+       
+          <center>
+          <input type="submit" data-role='button' value='提交' data-inline='true' data-theme='b'>
+          <input type="reset" data-role='button' value='取消' data-inline='true' data-theme='e'>
+		  </center>
+        </form>
+      </div>
+
+      <div data-role="footer">
+        <h1>designedby@wangchunlei</h1>
+      </div>
+    </div> 
+	</body>
+</html>
